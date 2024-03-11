@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="/css/styles.css">
+
+    <!--JQUERY-->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+  </head>
+<body>
+    <!--MENÚ DE NAVEGACIÓN-->   
+    <nav class="navbar navbar-expand-md navbar-custom border-bottom border-body" data-bs-theme="dark">  <!--bg-body-tertiary = Color del nav-->
+        <div class="container">
+            <a class="navbar-brand" href="#"><img src="/img/ueb_logo_portada.png" alt="logo" width="140px"></a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav ms-auto"> <!--<ul> Define una lista desordenada que servirá como el menú de navegación. Se le han aplicado las clases "nav-item" "nav_link".-->
+                <li class="nav-item"> <!--Crea la lista de elementos, son las pestañas*-->
+                  <a class="nav-link active" aria-current="page" href="#" target="_blank">Inicio</a> <!--Creamos un Elemento "a" con la  clase "nav_link"-->
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" href="/views/Formulario.ejs" target="_blank">Formulario</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" href="#">Tablas</a>
+                </li>   
+              </ul>
+            </div>
+        </div>        
+    </nav>    
+    
+     <!--HERO--> 
+     <header class="hero container-fluid">     
+        <section class="container mt-4"> <!--"Hero_container" es el contenedor de la sección <section>-->
+          <br>
+          <h1 class="hero_title">Sistema Web para el registro de enfermedades por zona</h1>   
+          <h1 class="hero_title">para la carrera de medicina</h1> 
+        </section>  
+    </header>
+    <!--CAROUSEL -->
+    <section class="fondoCarousel">
+        <div id="carouselExampleCaptions" class="carousel slide">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4" aria-label="Slide 5"></button>
+          </div>
+          <div class="carousel-inner ">
+            <div class="carousel-item active " >
+              <img src="/img/coqueluche.png" class="d-block img-fluid ms-auto" alt="..."> <!--img-fluid =  la clase img-fluid asegura que la imagen mantenga su relación de aspecto correcta mientras se ajusta al ancho del carrusel.-->
+              <div class="carousel-caption d-none d-md-block col-lg-5 col-md-12 col-12" >
+                <h2 style="color: #444345;" class="fw-bold">COQUELUCHE</h2>
+                <p style="font-size: 18px;">El coqueluche o tos convulsiva es una enfermedad infecciosa aguda sumamente contagiosa de las vías respiratorias altas, causada por la bacteria gramnegativa “Bordetella pertussis”. Este bacilo gram negativo y aerobio afecta exclusivamente al ser humano y su distribución es universal. Se caracteriza por inflamación traqueobronquial y accesos típicos de tos violenta y espasmódica con sensación de asfixia que terminan con un ruido estridente durante la inspiración.</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="/img/dengue.png" class="d-block c ms-auto" alt="...">
+              <div class="carousel-caption d-none d-md-block col-lg-5 col-md-12 col-12">
+                <h2 style="color: #444345;" class="fw-bold ">DENGUE</h2>
+                <p style="font-size: 18px;">La enfermedad del dengue se origina cuando un virus de la familia de los «Flavivirus» entra a nuestro cuerpo mediante el piquete de un mosquito. Así mismo, esta infección viral es transmitida principalmente por mosquitos hembras de la familia Aedes aegypti.Como resultado de esta picadura se presenta fiebre alta, intensos dolores de cabeza, dolor muscular, náuseas, vómitos, entre otros síntomas. Sin embargo, el dengue puede agravarse y generar el ya conocido dengue hemorrágico. </p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="/img/rabia.png" class="d-block img-fluid ms-auto" alt="...">
+              <div class="carousel-caption d-none d-md-block col-lg-5 col-md-12 col-12">
+                <h2 style="color: #444345;" class="fw-bold">RABIA</h2>
+                <p style="font-size: 18px;">La rabia es una enfermedad viral que es mortal pero prevenible.  Se puede propagar a las personas y las mascotas si las muerde o rasguña un animal con rabia. Una vez que una persona comienza a mostrar signos y síntomas de rabia, la enfermedad casi siempre causa la muerte. Por esta razón, cualquier persona que pueda tener un riesgo de contraer rabia debe recibir la vacuna antirrábica como protección.</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="/img/sarampion.png" class="d-block img-fluid ms-auto" alt="...">
+              <div class="carousel-caption d-none d-md-block col-5">
+                <h2 style="color: #444345;" class="fw-bold">SARAMPIÓN</h2>
+                <p style="font-size: 18px;">El sarampión es una enfermedad vírica muy contagiosa. Se propaga fácilmente cuando una persona infectada respira, tose o estornuda. Puede provocar una enfermedad grave, complicaciones o la muerte.</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="/img/coronavirus.png" class="d-block img-fluid ms-auto" alt="...">
+              <div class="carousel-caption d-none d-md-block col-5">
+                <h2 style="color: #444345;" class="fw-bold">CORONAVIRUS</h2>
+                <p style="font-size: 18px;">La enfermedad por coronavirus (COVID-19) es una enfermedad infecciosa causada por el virus SARS-CoV-2. 
+  
+                  La mayoría de las personas infectadas por el virus experimentarán una enfermedad respiratoria de leve a moderada y se recuperarán sin requerir un tratamiento especial. Sin embargo, algunas enfermarán gravemente y requerirán atención médica. Las personas mayores y las que padecen enfermedades subyacentes, como enfermedades cardiovasculares, diabetes, enfermedades respiratorias crónicas o cáncer, tienen más probabilidades de desarrollar una enfermedad grave. Cualquier persona, de cualquier edad, puede contraer la COVID-19 y enfermar gravemente o morir.</p>
+              </div>
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </section>
+
+    <!--ACERCA DE-->
+    <section class="container" >
+        <div class="row">
+          <div class="col-lg-6 col-md-12 col-12">
+            <center>
+              <img src="/img/Doctor.png" class="img-fluid" alt="">
+            </center>
+          </div>
+          <div class="col-lg-6 col-md-12 col-12">
+            <br><br><br><br>
+            <h3 class="mb-3">Acerca del <span style="color:rgba(16, 175, 175, 0.893);;">mapa digital</span></h3>
+            <h4 class="mb-3" style="text-align: justify;">"La aplicación de tecnologías web en epidemiologia tiende a mejorar el análisis y la toma de decisiones.”</h4>
+            <p style="font-size: 18px; text-align: justify;">El mapa digital permitirá a profesionales de la salud y a la comunidad acceder a información crucial con solo un clic.  Con esta herramienta de vanguardia, podrás acceder a mapas interactivos, tablas y gráficos en tiempo real, simplificando la recopilación y análisis de datos epidemiológicos.</p>
+          </div>
+        </div>
+      </section>
+
+<!--CARTAS-->
+<div class="container" style="text-align: justify;">   
+    <div class="row ms-5">
+      <div class="card col-lg-5 col-md-8 col-12 mx-4 my-3">
+        <img class="card-img-top my-3" src="/img/Medicina info1.jpg" alt="">
+        <div class="card-body">
+          <h1>Marcadores</h1>
+          <h6 class="text-muted mb-2">Marcadores</h6>
+          <p>Los marcadores no solo ayudan a identificar ubicaciones, sino que también pueden contener información adicional, como nombres, descripciones y enlaces útiles. Personalizar y utilizar marcadores de manera efectiva en tus mapas no solo mejora la visualización de la información geoespacial, sino que también proporciona una experiencia de usuario más enriquecedora y contextualizada.</p>
+        </div>
+      </div>
+  
+      <div class="card col-lg-5 col-md-8 col-12 mx-4 my-3">
+        <img class="card-img-top my-3" src="/img/7da63a50e9ad7b7c4f67c2888e81882a.jpg" alt="">
+        <div class="card-body">
+          <h2>Visualización</h2>
+          <h6 class="text-muted mb-2">Visualización</h6>
+          <p>La visualización de datos sobre enfermedades en mapas de Google es una herramienta valiosa para comprender y controlar la propagación de enfermedades. Los mapas interactivos pueden mostrar datos epidemiológicos en tiempo real, como la ubicación de casos confirmados, tasas de infección por área geográfica y la distribución de recursos médicos.</p>
+        </div>
+      </div>
+      <div class="card col-lg-5 col-md-8 col-12 mx-auto my-3">
+        <img class="card-img-top my-3" src="/img/MedicinaInfo2.jpg" alt="">
+        <div class="card-body">
+          <h1>Sistema responsive</h1>
+          <h6 class="text-muted mb-2">responsive</h6>
+          <p>capacidad de una página web o una aplicación para adaptarse de manera dinámica a diferentes tamaños de pantalla y dispositivos, como ordenadores de escritorio, tablets y teléfonos móviles.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+    <!--FORMULARIOS-->   
+    <div class="container my-5 Formularios">     
+      <form class="row g-3 px-4 mb-3" action="/validar" method="post" autocomplete="off"> <!--"g-3"= gutter-3 para separar verticalmente entre filas/ "gx-3"= gutter x-3 para separar horizontalmente entre filas de específicamente este form-->
+          <legend>I.- INFORMACIÓN DEL PACIENTE</legend>
+              <label class="col-lg-4 col-md-6 col-12 col-form-label" for="nombre_ap">Nombres y apellidos</label>
+                  <div class="col-lg-8 col-md-6 col-12">
+                      <input class="form-control" id="nombre_ap" name="nombre_ap" type="text" placeholder="Nombres y apellidos">
+                  </div>
+              <label class="col-lg-4 col-md-6 col-12 col-form-label" for="nombre_resp">Nombre de la madre o responsable</label>
+                  <div class="col-lg-8 col-md-6 col-12">
+                      <input class="form-control" id="nombre_resp" name="nombre_resp" type="text" placeholder="Nombre de la madre o responsable">
+                  </div>                          
+              <fieldset class="col-lg-4 col-md-6 col-12">
+                  <td for="">Sexo</td>
+                  <div class="form-check">
+                      <label class="form-check-label" for="Masculino">Masculino</label>
+                      <input class="form-check-input" id="Masculino" value = "Masculino" type="radio" name="sexo">
+                  </div>
+                  <div class="form-check">
+                      <label class="form-check-label" for="Femenino">Femenino</label>
+                      <input class="form-check-input" id="Femenino" value = "Femenino" type="radio" name="sexo">
+                  </div>
+              </fieldset>
+              <div class="col-lg-8 col-md-6 col-12">
+                  <label class="form-label" for="direccion">Dirección</label>
+                  <input class="form-control" id="direccion" name="direccion" type="text"> 
+              </div>
+              <div class="col-lg-4 col-md-6 col-12">
+                  <label class="form-label" for="fecha_nacimiento">Fecha de nacimiento</label>
+                  <input class="form-control" id="fecha_nacimiento" name="fecha_nacimiento" type="date" value =""> 
+              </div>
+              <div class="col-lg-8 col-md-6 col-12">
+                  <label class="form-label" for="edad">Edad</label>
+                  <input class="form-control" id="edad" name="edad" type="number" placeholder="Edad"> 
+              </div>
+              <div class="col-lg-4 col-md-6 col-12">
+                  <label class="form-label" for="nacionalidad">Nacionalidad</label>
+                  <input class="form-control" id="nacionalidad" name="nacionalidad" type="text" placeholder="Nacionalidad">
+              </div>
+              <div class="col-lg-4 col-md-6 col-12">
+                  <label class="form-label" for="ocupacion">Ocupación</label>
+                  <input class="form-control" id="ocupacion" name="ocupacion" type="text" placeholder="Ocupación">
+              </div>
+              <div class="col-lg-4 col-md-6 col-12">
+                  <label class="form-label" for="celular">Teléfono/Celular</label>
+                  <input class="form-control" id="celular" name="celular" type="text" placeholder="Teléfono/Celular">
+              </div>
+              
+      
+          <legend>II.- IDENTIFICACIÓN DE LA INSTITUCIÓN QUE NOTIFICA</legend>
+             
+          <div class="col-lg-4 col-md-6 col-12">
+              <label class="form-label mb-0 text-center">Pais: </label>
+              <label class="form-label mx-3 mb-0 text-center">Bolivia</label>              
+          </div>  
+          <div class="col-lg-4 col-md-6 col-12">
+              <label class="form-label mb-0 text-center">Departamento: </label>
+              <label class="form-label mx-3 mb-0 text-center">Santa Cruz</label>    
+          </div>
+          <div class="col-lg-4 col-md-12 col-12">
+              <select class="form-select" aria-label="Default select example" id="diagnostico" name="diagnostico"> <!--Permite ingresar la lista despegable-->
+                  <option selected>Diagnóstico Inicial</option>
+                  <option value="Coqueluche">Coqueluche</option>
+                  <option value="Dengue">Dengue</option>
+                  <option value="Sarampión">Sarampión</option>
+                  <option value="Tuberculosis">Tuberculosis</option>
+                </select>
+          </div>
+          <label class="col-lg-4 col-md-6 col-12 col-form-label" for="notificado_por">Notificado por</label>
+                  <div class="col-lg-8 col-md-6 col-12">
+                      <input class="form-control" id="notificado_por" name="notificado_por" type="text" placeholder="Notificado por">
+                  </div>
+          <div class="col-lg-4 col-md-6 col-12">
+              <label class="form-label" for="celular_est">Teléfono/Celular del que notifica</label>
+              <input class="form-control" id="celular_est" name="celular_est" type="text" placeholder="Teléfono/Celular">
+          </div>
+          <div class="col-lg-4 col-md-6 col-12 mb-4">
+              <label class="form-label" for="fecha_Consulta">Fecha de consulta</label>
+              <input class="form-control" id="fecha_Consulta" name="fecha_Consulta" type="date" placeholder="Fecha de consulta"> 
+          </div>
+          <div class="row">
+            <div class="col-lg-6 col-md-6 col-12 p-3">
+                <input type="text" class="form-control" placeholder="lat" id="lat" name="lat">
+            </div>
+            <div class="col-lg-6 col-md-6 col-12 p-3">
+                <input type="text" class="form-control" placeholder="lng" id="lng" name="lng">
+            </div>
+        </div>
+          <div class="col-12 m-3">                    
+            <input class="button-enviar" type="submit" name="enviar" value="Enviar"> 
+        </div>
+      </form>        
+  </div>
+
+
+
+
+    
+     <!-- MAPA DIGITAL 
+   <div class="container my-3">
+    <form action="/validar" method="post">
+        <div class="row">
+            <div class="col-lg-5 col-md-6 col-12 p-3">
+                <input type="text" class="form-control" placeholder="lat" id="lat">
+            </div>
+            <div class="col-lg-5 col-md-6 col-12 p-3">
+                <input type="text" class="form-control" placeholder="lng" id="lng">
+            </div>
+        </div>        
+    </form>        
+   </div>--> 
+
+   <div class="container" style="background-color: #F1F1F1; border-radius: 15px;">
+    <div class="Mapa ms-2">      
+        <div class="Mapa">        
+            <script>(g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement("script"));e.set("libraries",[...r]+"");for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps."+q);a.src=`https://maps.${c}apis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=>h=n(Error(p+" could not load."));a.nonce=m.querySelector("script[nonce]")?.nonce||"";m.head.append(a)}));d[l]?console.warn(p+" only loads once. Ignoring:",g):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})
+                ({key: "AIzaSyBBJX1wT6mCuVmESfYyeHzIhbP9XxcwWB8", v: "weekly"});</script>
+                <button id="button" class="btn btn-primary my-3">Mostrar ubicación</button>
+                <div id="map"></div>
+                <script type="module" src="/js/script.js"></script>     
+            </div>
+     </div>   
+    </div>
+
+
+
+    <!-- BOOTSTRAP 5 -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="/style.css">
+</head>
+  <body>
+     <!--MENÚ DE NAVEGACIÓN-->   
+     <nav class="navbar navbar-expand-md navbar-custom border-bottom border-body" data-bs-theme="dark">  <!--bg-body-tertiary = Color del nav-->
+        <div class="container">
+            <a class="navbar-brand" href="#"><img src="/img/ueb_logo_portada.png" alt="logo" width="140px"></a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav ms-auto"> <!--<ul> Define una lista desordenada que servirá como el menú de navegación. Se le han aplicado las clases "nav-item" "nav_link".-->
+                <li class="nav-item"> <!--Crea la lista de elementos, son las pestañas*-->
+                  <a class="nav-link active" aria-current="page" href="#" target="_blank">Inicio</a> <!--Creamos un Elemento "a" con la  clase "nav_link"-->
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" href="#" target="_blank">Formulario</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" href="#">Noticias</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                </li>
+              </ul>
+            </div>
+        </div>        
+    </nav>     
+   
+
+    <!--FORMULARIOS-->   
+    <div class="container my-5 Formularios">     
+        <form class="row g-3 px-4 mb-5" action="/validar" method="post" autocomplete="off"> <!--"g-3"= gutter-3 para separar verticalmente entre filas/ "gx-3"= gutter x-3 para separar horizontalmente entre filas de específicamente este form-->
+            <legend>I.- INFORMACIÓN DEL PACIENTE</legend>
+                <label class="col-lg-4 col-md-6 col-12 col-form-label" for="nombre_ap">Nombres y apellidos</label>
+                    <div class="col-lg-8 col-md-6 col-12">
+                        <input class="form-control" id="nombre_ap" name="nombre_ap" type="text" placeholder="Nombres y apellidos">
+                    </div>
+                <label class="col-lg-4 col-md-6 col-12 col-form-label" for="nombre_resp">Nombre de la madre o responsable</label>
+                    <div class="col-lg-8 col-md-6 col-12">
+                        <input class="form-control" id="nombre_resp" name="nombre_resp" type="text" placeholder="Nombre de la madre o responsable">
+                    </div>                          
+                <fieldset class="col-lg-4 col-md-6 col-12">
+                    <td for="">Sexo</td>
+                    <div class="form-check">
+                        <label class="form-check-label" for="Masculino">Masculino</label>
+                        <input class="form-check-input" id="Masculino" value = "Masculino" type="radio" name="sexo">
+                    </div>
+                    <div class="form-check">
+                        <label class="form-check-label" for="Femenino">Femenino</label>
+                        <input class="form-check-input" id="Femenino" value = "Femenino" type="radio" name="sexo">
+                    </div>
+                </fieldset>
+                <div class="col-lg-8 col-md-6 col-12">
+                    <label class="form-label" for="direccion">Dirección</label>
+                    <input class="form-control" id="direccion" name="direccion" type="text"> 
+                </div>
+                <div class="col-lg-4 col-md-6 col-12">
+                    <label class="form-label" for="fecha_nacimiento">Fecha de nacimiento</label>
+                    <input class="form-control" id="fecha_nacimiento" name="fecha_nacimiento" type="date" value =""> 
+                </div>
+                <div class="col-lg-8 col-md-6 col-12">
+                    <label class="form-label" for="edad">Edad</label>
+                    <input class="form-control" id="edad" name="edad" type="number" placeholder="Edad"> 
+                </div>
+                <div class="col-lg-4 col-md-6 col-12">
+                    <label class="form-label" for="nacionalidad">Nacionalidad</label>
+                    <input class="form-control" id="nacionalidad" name="nacionalidad" type="text" placeholder="Nacionalidad">
+                </div>
+                <div class="col-lg-4 col-md-6 col-12">
+                    <label class="form-label" for="ocupacion">Ocupación</label>
+                    <input class="form-control" id="ocupacion" name="ocupacion" type="text" placeholder="Ocupación">
+                </div>
+                <div class="col-lg-4 col-md-6 col-12">
+                    <label class="form-label" for="celular">Teléfono/Celular</label>
+                    <input class="form-control" id="celular" name="celular" type="text" placeholder="Teléfono/Celular">
+                </div>
+                
+        </form>
+        <form class="row g-3 px-4 mb-5" action="/validar" method="post" autocomplete="off">
+            <legend>II.- IDENTIFICACIÓN DE LA INSTITUCIÓN QUE NOTIFICA</legend>
+               
+            <div class="col-lg-4 col-md-6 col-12">
+                <label class="form-label mb-0 text-center">Pais: </label>
+                <label class="form-label mx-3 mb-0 text-center">Bolivia</label>              
+            </div>  
+            <div class="col-lg-4 col-md-6 col-12">
+                <label class="form-label mb-0 text-center">Departamento: </label>
+                <label class="form-label mx-3 mb-0 text-center">Santa Cruz</label>    
+            </div>
+            <div class="col-lg-4 col-md-12 col-12">
+                <select class="form-select" aria-label="Default select example"> <!--Permite ingresar la lista despegable-->
+                    <option selected>Diagnóstico Inicial</option>
+                    <option value="Coqueluche">Coqueluche</option>
+                    <option value="Dengue">Dengue</option>
+                    <option value="Sarampión">Sarampión</option>
+                    <option value="Tuberculosis">Tuberculosis</option>
+                  </select>
+            </div>
+            <label class="col-lg-4 col-md-6 col-12 col-form-label" for="notificado_por">Notificado por</label>
+                    <div class="col-lg-8 col-md-6 col-12">
+                        <input class="form-control" id="notificado_por" name="notificado_por" type="text" placeholder="Notificado por">
+                    </div>
+            <div class="col-lg-4 col-md-6 col-12">
+                <label class="form-label" for="celular_est">Teléfono/Celular del que notifica</label>
+                <input class="form-control" id="celular_est" name="celular_est" type="text" placeholder="Teléfono/Celular">
+            </div>
+            <div class="col-lg-4 col-md-6 col-12 mb-4">
+                <label class="form-label" for="fecha_Consulta">Fecha de consulta</label>
+                <input class="form-control" id="fecha_Consulta" name="fecha_Consulta" type="date" placeholder="Fecha de consulta"> 
+            </div>
+            <div class="col-12 m-3">                    
+              <input class="button-enviar" type="submit" name="enviar" value="Enviar"> 
+          </div>
+        </form>        
+    </div>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  </body>
+</html>
